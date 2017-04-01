@@ -16,4 +16,9 @@ function UserInfo(props) {
     return userInfo;
 }
 
+UserInfo.prototype = {
+    user: React.PropTypes.object,
+    repos: React.PropTypes.array,
+}
+
 module.exports = UserInfo;

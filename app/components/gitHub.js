@@ -1,5 +1,7 @@
 var React = require('react');
 var SearchUser = require('./searchUser')
+var UserInfo = require('./userInfo')
+
 var GitHub = React.createClass({
 
     // inicia o estado do objeto
@@ -22,6 +24,11 @@ var GitHub = React.createClass({
                     updateUser={this.updateUser} 
                     updateRepos={this.updateRepos}
                 />
+
+                <UserInfo 
+                    user={this.state.user}
+                    repos={this.state.repos}
+                    />
             </div>
         );
     }

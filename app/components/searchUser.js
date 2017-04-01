@@ -1,9 +1,16 @@
 var React = require('react');
+var GitHubUser = require('../services/gitHubUser');
 
 var SearchUser = React.createClass({
     handleSubmit: function (e) {
         e.preventDefault();
-        console.log(this.refs.username.value);
+        GitHubUser.getByUsername(this.refs.username.value).then(function(res){
+            console.log(res);
+        });
+
+        GitHubUser.getReposByUsername(this.refs.username.value).then(function(res){
+            console.log(res);
+        });
     },
     render: function () {
         return (

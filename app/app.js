@@ -10,3 +10,9 @@ function life(success){
   success ? keepGoin() :
     life(keepTrying());
 }
+
+
+function life(success) {
+    success ? keepGoing() :
+        life(keepTrying());
+}
